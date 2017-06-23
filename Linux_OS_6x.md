@@ -7,12 +7,9 @@
 -	Trường hợp không có kết nối Internet, thực hiện chạy lệnh sau để tiến hành cài đặt:
 -   <b> Bước 1: </b> Cài đặt 1 máy ảo với hệ điều hành tương ứng với hệ điều hành cần nâng cấp kernel. Chú ý máy ảo này phải có kết nối Internet.
 -	<b> Bước 2: </b> Download toàn bộ các gói cần cài đặt nâng cấp kernel mà distro cung cấp về máy ảo
->    mkdir /opt/upgrade.
-</br>
->    yum install yum-downloadonly -y.
-</br>
+>    mkdir /opt/upgrade <br>
+>    yum install yum-downloadonly -y <br>
 >    yum install kernel -y --downloadonly --downloaddir=/opt/upgrade
-</br>
 -	<b> Bước 3: </b>Tải toàn bộ gói .rpm trong thư mục /opt/upgrade của máy tính lên máy chủ và thực hiện cài như cài gói .rpm như thông thường.
 -   Lưu ý: Sau khi cài đặt xong cần khởi động lại máy chủ để hệ điều hành nhận kernel mới.
 -	Hệ điều hành phải được cập nhật các bản vá security đã được Tập đoàn cảnh báo.
