@@ -21,10 +21,10 @@
 -	<b> Bước 2: </b> Liệt kê các dịch vụ đang được chạy ở runlevel 3. Tìm kiếm và xoá bỏ các dịch vụ không cần thiết.
 > chkconfig --list | grep '3:on'
 - Tìm kiếm các dịch vụ chạy ở mức độ 3 không sử dụng, tiến hành tắt chúng bằng cách:
-> chkconfig <serviceName> off
+> chkconfig "serviceName" off
 -	Bước 3: Kiểm tra các cổng đang mở trên hệ thống và các dịch vụ đang lắng nghe trên các cổng đó, tiến hành tắt các dịch vụ không cần thiết:
-> netstat –tulpn
--Kiểm tra danh sách các dịch vụ không cần thiết, tiến hành tắt các dịch vụ:
+> netstat –tulpn </br>
+-  Kiểm tra danh sách các dịch vụ không cần thiết, tiến hành tắt các dịch vụ:
 > service <serviceName> stop
 ##3.	Thiết lập chính sách tài khoản
 -	Xóa hoặc vô hiệu hóa các toàn khoản không sử dụng trên hệ thống.
