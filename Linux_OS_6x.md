@@ -11,8 +11,8 @@
 >    yum install yum-downloadonly -y <br>
 >    yum install kernel -y --downloadonly --downloaddir=/opt/upgrade
 -	<b> Bước 3: </b>Tải toàn bộ gói .rpm trong thư mục /opt/upgrade của máy tính lên máy chủ và thực hiện cài như cài gói .rpm như thông thường.
--   Lưu ý: Sau khi cài đặt xong cần khởi động lại máy chủ để hệ điều hành nhận kernel mới.
--	Hệ điều hành phải được cập nhật các bản vá security đã được Tập đoàn cảnh báo.
+-   **Lưu ý: Sau khi cài đặt xong cần khởi động lại máy chủ để hệ điều hành nhận kernel mới.**
+
 </br>
 ## 2.	Xóa hoặc vô hiệu hóa các dịch vụ, ứng dụng, giao thức mạng không cần thiết.
 - Trong thực tế, một server (máy chủ) trong hệ thống sẽ đảm nhiệm một chức năng riêng biệt. Khi cài đặt hệ điều hành cho server, cần xóa hoặc disable tất cả các dịch vụ, ứng dụng, giao thức không cần thiết.
