@@ -10,4 +10,4 @@
  </tr> 
  </table>
 
- by @kaio91
+:copyright: kaio91
