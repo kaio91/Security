@@ -16,7 +16,6 @@
 -   Trong thực tế, một server (máy chủ) trong hệ thống sẽ đảm nhiệm một chức năng riêng biệt. 
 -   Khi cài đặt hệ điều hành cho server, cần xóa hoặc disable tất cả các dịch vụ, ứng dụng, giao thức không cần thiết.
 -   <b> Bước 1: </b> Liệt kê toàn bộ các gói tin với câu lệnh “yum list”, tìm kiếm các gói tin không cần thiết và thực hiện gỡ bỏ bằng cách sau:
-
 > yum remove <package-name>
 -	<b> Bước 2: </b> Liệt kê các dịch vụ đang được chạy ở runlevel 3. Tìm kiếm và xoá bỏ các dịch vụ không cần thiết.
 > chkconfig --list | grep '3:on'
@@ -32,19 +31,19 @@
 > cat /etc/passwd | grep /*sh$ | awk -F: '{print $1}'
 - <b> Bước 2: </b> Kiểm tra xem trong danh sách tài khoản hiện ra xem tài khoản nào không sử dụng. Thực hiện xoá các tài khoản đó bằng lệnh sau:
 > userdel –r username
-Ví dụ: Trong danh sách có tài khoản user1 không sử dụng
-#userdel –r user1
-•	Cấu hình chính sách mật khẩu cho tài khoản:
-o	Độ dài tối thiểu của mật khẩu phải lớn hơn hoặc bằng 8 ký tự.
-Bước 1: Mở tập tin /etc/pam.d/system-auth
-#vi /etc/pam.d/system-auth
-Bước 2: Thêm hoặc cập nhật cấu hình sau trong tập tin cấu hình của PAM:
-password    requisite     pam_cracklib.so [các option trước đó] minlen=8
-Bước 3: Lưu lại tập tin cấu hình.
-o	Mật khẩu phải chứa ký tự viết hoa, viết thường, chữ số, ký tự đặc biệt.
-Bước 1: Mở tập tin /etc/pam.d/system-auth
-#vi /etc/pam.d/system-auth
-Bước 2: Thêm hoặc cập nhật cấu hình sau trong tập tin cấu hình của PAM:
+=> Ví dụ: Trong danh sách có tài khoản user1 không sử dụng
+> userdel –r user1
+-	Cấu hình chính sách mật khẩu cho tài khoản:
+-	Độ dài tối thiểu của mật khẩu phải lớn hơn hoặc bằng 8 ký tự.
+- <b> Bước 1: </b> Mở tập tin /etc/pam.d/system-auth
+> vi /etc/pam.d/system-auth
+- <b> Bước 2:</b> Thêm hoặc cập nhật cấu hình sau trong tập tin cấu hình của PAM:
+> password    requisite     pam_cracklib.so [các option trước đó] minlen=8
+- <b> Bước 3: </b> Lưu lại tập tin cấu hình.
+-	Mật khẩu phải chứa ký tự viết hoa, viết thường, chữ số, ký tự đặc biệt:
+- <b> Bước 1:</b> Mở tập tin /etc/pam.d/system-auth
+> vi /etc/pam.d/system-auth
+- <b> Bước 2: </b> Thêm hoặc cập nhật cấu hình sau trong tập tin cấu hình của PAM:
 password    requisite     pam_cracklib.so [các option trước đó] ucredit=-1 lcredit=-1 dcredit=-1 ocredit=-1
 Bước 3: Lưu lại tập tin cấu hình.
 o	Thời gian bắt buộc phải thay đổi mật khẩu: Thiết lập giá trị 90 ngày với hệ thống public và 180 ngày với hệ thống nội bộ. Ví dụ thiết lập với hệ thống public như sau:
