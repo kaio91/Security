@@ -3,7 +3,7 @@
 -	Kiểm tra phiên bản kernel với lệnh: “uname -a”. Yêu cầu kernel phải được nâng cấp lên phiên bản mới nhất tính tới thời điểm cài đặt.
 -	Trong trường hợp cập nhật bản vá, nâng cấp kernel.
 -	Trường hợp có kết nối Internet, thực hiện chạy lệnh sau để nâng cấp kernel.
-<b>   yum upgrade kernel </b>
+<p>   yum upgrade kernel </p>
 -	Trường hợp không có kết nối Internet, thực hiện chạy lệnh sau để tiến hành cài đặt:
 -   <b> Bước 1: </b> Cài đặt 1 máy ảo với hệ điều hành tương ứng với hệ điều hành cần nâng cấp kernel. Chú ý máy ảo này phải có kết nối Internet.
 -	<b> Bước 2: </b> Download toàn bộ các gói cần cài đặt nâng cấp kernel mà distro cung cấp về máy ảo:
